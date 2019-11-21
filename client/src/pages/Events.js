@@ -124,11 +124,10 @@ class Events extends Component {
                               <i
                                 className="material-icons"
                                 onClick={() => {
-                                  this.state.totalPoints = this.state.totalPoints + event.eventPoints;
-                                              this.deleteEvent(event._id)
-
-                                                }
-                                              }
+                                                  this.state.totalPoints = this.state.totalPoints + event.eventPoints;
+                                                  this.deleteEvent(event._id)
+                                               }
+                                        }
                               >
                                 add
                               </i>
