@@ -3,6 +3,7 @@ import TaskInput from "../components/TaskInput";
 import { CalendarDate, Input, FormBtn } from "../components/Form";
 import {Dropdown, DropItem} from "../components/List";
 import API from "../utils/API";
+import life from "../life.png";
 
 class Dashboard extends Component {
 
@@ -82,6 +83,7 @@ class Dashboard extends Component {
         return (
           <div>
             <h2>Total Points: 0{this.getPoints}</h2>
+            <img src={life} alt="A Pic"/>
             <div className="col s9 m9">
                 <form>
                     <Input 
