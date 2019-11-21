@@ -28,6 +28,14 @@ class Events extends Component {
         .catch(err => console.log(err));
     };
 
+    loadUserEvents = () => {
+      API.getUserEvents()
+        .then(res =>
+          this.setState({ events: res.data, eventPoints: 0, summary: "", date: "", voucherCode: "" })
+        )
+        .catch(err => console.log(err));
+    };
+
     deleteEvent = id => {
       API.deleteEvent(id)
         .then(res => this.loadEvents())
@@ -50,7 +58,8 @@ class Events extends Component {
           voucherCode: this.state.voucherCode,
           eventPoints: this.state.eventPoints
         })
-          .then(res => this.loadEvents())
+          // .then(res => this.loadEvents())
+          .then(res => this.loadUserEvents())
           .catch(err => console.log(err));
       }
     };
@@ -79,7 +88,7 @@ class Events extends Component {
     render() {
         return (
           <div>
-            <h2>Total Points: {this.addPoints}</h2>
+            <h2>Total Points: {this.state.totalPoints}</h2>
             <div className="col s6 m6">
                 <form>
                     <Input 
@@ -114,13 +123,19 @@ class Events extends Component {
                             <a className="btn-floating halfway-fab waves-effect waves-light red">
                               <i
                                 className="material-icons"
-                                onClick={() => this.deleteEvent(event._id)}
+                                onClick={() => {
+                                  this.state.totalPoints = this.state.totalPoints + event.eventPoints;
+                                              this.deleteEvent(event._id)
+
+                                                }
+                                              }
                               >
                                 add
                               </i>
                             </a>
                           </div>
                           <span className="card-title">
+                          {event.eventPoints} Points
                           </span>
                           {event.summary}
                         </AchievementCard>

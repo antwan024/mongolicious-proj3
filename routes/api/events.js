@@ -1,9 +1,15 @@
 const router = require("express").Router();
 const eventsController = require("../../controllers/eventsController");
+const userController = require("../../controllers/userController");
 
 // Matches with "/api/events"
 router.route("/")
   .get(eventsController.findAll)
+  .post(eventsController.create);
+
+// Matches with "/api/user"
+router.route("/user/:id")
+  .get(eventsController.findById)
   .post(eventsController.create);
   
 

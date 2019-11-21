@@ -20,6 +20,9 @@ export default {
   getEvents: function(id) {
     return axios.get("/api/events");
   },
+  getUserEvents: function(id) {
+    return axios.get("/api/events/user" + id);
+  },
   getEvent: function(id) {
     return axios.get("/api/events/" + id);
   },
