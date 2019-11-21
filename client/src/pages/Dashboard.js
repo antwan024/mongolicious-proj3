@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TaskInput from "../components/TaskInput";
 import { CalendarDate, Input, FormBtn } from "../components/Form";
 import {Dropdown, DropItem} from "../components/List";
+import Nav from "../components/Nav";
 import API from "../utils/API";
 
 class Dashboard extends Component {
@@ -81,6 +82,10 @@ class Dashboard extends Component {
     render() {
         return (
           <div>
+             <Nav /> 
+          
+          <div>
+           
             <h2>Total Points: {this.addPoints}</h2>
             <div className="col s9 m9">
                 <form>
@@ -108,7 +113,7 @@ class Dashboard extends Component {
                             <DropItem key={event._id}>
                               
                                 
-                                  Need: {event.eventPoints} , {event.summary}
+                                {event.eventPoints} points for {event.summary}
                                 
                               
                               {/* <DeleteBtn onClick={() => this.deleteEvent(event._id)} /> */}
@@ -125,6 +130,7 @@ class Dashboard extends Component {
 
                 
                 <script src="./../src/misc/jquery.js"></script>
+            </div>
             </div>
             </div>
             

@@ -6,23 +6,23 @@ const Nav = (props) => {
     <div>
       <nav>
         <div className="nav-wrapper white ">
-          <a href="/dashboard" className="brand-logo center black-text">
+          <a {...props} href="/dashboard" className="brand-logo center black-text">
             Best Life 
             <p {...props} id="user" class="text-fix"></p>
           </a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li>
-              <a href="/dashboard">
+              <a {...props} href="/dashboard">
                 <i className="material-icons black-text">home</i>
               </a>
             </li>
             <li>
-              <a href="achievements" className="black-text">
+              <a {...props} href="achievements" className="black-text">
                 <i className="material-icons black-text">check_circle</i>
               </a>
             </li>
             <li>
-              <a href="events">
+              <a {...props} href="events">
                 <i className="material-icons black-text">stars</i>
               </a>
             </li>
