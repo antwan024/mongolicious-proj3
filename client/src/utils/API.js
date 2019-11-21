@@ -17,7 +17,7 @@ export default {
   saveAchievement: function(achievmentData) {
     return axios.post("/api/achievements", achievmentData);
   },
-  getEvents: function() {
+  getEvents: function(id) {
     return axios.get("/api/events");
   },
   getEvent: function(id) {
@@ -29,10 +29,9 @@ export default {
   saveEvent: function(eventData) {
     return axios.post("/api/events", eventData);
   },
-  addPoints: function() {
-    return axios.post("/api/events/addPoints")
+  addPoints: function(eventData) {
+    return axios.post("/api/events/addPoints", eventData)
   },
-
 
   saveUser: function(userData) {
     return axios.post("/api/user", userData);

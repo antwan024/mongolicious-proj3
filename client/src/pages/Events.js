@@ -12,7 +12,8 @@ class Events extends Component {
       eventPoints: 0,
       summary: "",
       date: "",
-      voucherCode: ""
+      voucherCode: "",
+      totalPoints: 0,
     };
 
     componentDidMount() {
@@ -65,12 +66,20 @@ class Events extends Component {
       }
     };
 
+    addPoints = event => {
+        event.preventDefault();
+        API.addPoints()
+          .then(res => this.addPoints())
+          .catch(err => console.log(err));
+
+    };
+
 
 
     render() {
         return (
           <div>
-            <h2>Total Points: 0{this.getPoints}</h2>
+            <h2>Total Points: {this.addPoints}</h2>
             <div className="col s6 m6">
                 <form>
                     <Input 
@@ -112,7 +121,6 @@ class Events extends Component {
                             </a>
                           </div>
                           <span className="card-title">
-                            {event.eventPoints} Points
                           </span>
                           {event.summary}
                         </AchievementCard>

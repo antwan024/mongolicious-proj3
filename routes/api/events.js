@@ -14,9 +14,10 @@ router
   .put(eventsController.update)
   .delete(eventsController.remove);
 
+// Matches with "/api/events/addPoints"
 router
     .route("/addPoints")
-    .get(eventsController.findAll)
+    // .get(eventsController.findAll)
     .post(eventsController.addPoints);
   
 

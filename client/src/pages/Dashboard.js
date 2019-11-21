@@ -123,7 +123,7 @@ class Dashboard extends Component {
                   
                 </form>
 
-                <h2>Points: 0{this.getPoints}</h2>
+                
                 <script src="./../src/misc/jquery.js"></script>
             </div>
             </div>
