@@ -139,16 +139,16 @@ class Events extends React.Component {
                             {/* <img src="/images/dog.jpg"/> */}
                             {/* <img src =  {event.sponsor == "regal" ? "/images/dog.jpg" : "/images/best.jpg"}/> */}
                             <img src =  
-                                        {(() => {
-                                          switch (event.sponsor) {
-                                            case "regal": return "/images/dog.jpg";
-                                            case "united": return "/images/wellness.jpeg";
-                                            case "blue":  return "#0000FF";
-                                            default:      return "/images/best.jpg";
-                                          }
-                                        })()}
-                            
-                            
+                                        {
+                                          (() => {
+                                              switch (event.sponsor) {
+                                                case "regal": return "/images/dog.jpg";
+                                                case "united": return "/images/wellness.jpeg";
+                                                case "comedyworks":  return "/images/comedy.jpg";
+                                                default:      return "/images/best.jpg";
+                                              }
+                                          })()
+                                        }
                             />
                            
                             
