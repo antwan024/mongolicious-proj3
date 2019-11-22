@@ -82,9 +82,10 @@ class Dashboard extends Component {
     render() {
         return (
           <div>
-            <h2>Total Points: 0{this.getPoints}</h2>
             <img src={life} alt="A Pic"/>
-            <div className="col s9 m9">
+            <div className="container">
+            <h2>Total Points: 0{this.getPoints}</h2>
+            <div className="container">
                 <form>
                     <Input 
                         value={this.state.summary}
@@ -126,6 +127,7 @@ class Dashboard extends Component {
                 </form>
 
                 <h2>Points: 0{this.getPoints}</h2>
+                </div>
                 <script src="./../src/misc/jquery.js"></script>
             </div>
             </div>
