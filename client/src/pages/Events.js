@@ -15,7 +15,7 @@ class Events extends React.Component {
       sponsor: "",
       date: "",
       voucherCode: "",
-      totalPoints: 0,
+      totalPoints: 0
     };
 
     componentDidMount() {
@@ -33,7 +33,7 @@ class Events extends React.Component {
     loadUserEvents = () => {
       API.getUserEvents()
         .then(res =>
-          this.setState({ events: res.data, eventPoints: 0, summary: "", date: "", voucherCode: "" })
+          this.setState({ events: res.data, eventPoints: res.data.totalEventPoints, summary: "", date: "", voucherCode: "" })
         )
         .catch(err => console.log(err));
     };
@@ -121,6 +121,7 @@ class Events extends React.Component {
                         placeholder="Enter points:"
                     />
                     
+                    
                     <FormBtn 
                         onClick={this.handleFormSubmit}
                     >Commit!</FormBtn>
@@ -142,9 +143,12 @@ class Events extends React.Component {
                                         {
                                           (() => {
                                               switch (event.sponsor) {
-                                                case "regal": return "/images/dog.jpg";
-                                                case "united": return "/images/wellness.jpeg";
+                                                case "regal": return "/images/regal.png";
+                                                case "united": return "/images/united.jpg";
                                                 case "comedyworks":  return "/images/comedy.jpg";
+                                                case "livenation":  return "/images/livenation.jpg";
+                                                case "24hour":  return "/images/24hour.jpg";
+                                                case "corepower":  return "/images/corepower.png";
                                                 default:      return "/images/best.jpg";
                                               }
                                           })()
@@ -163,7 +167,7 @@ class Events extends React.Component {
                                                     pathname: '/achievements',
                                                     totalPoints: this.state.totalPoints // your data array of objects
                                                   })
-                                                  // this.deleteEvent(event._id)
+                                                  this.deleteEvent(event._id)
                                                }
                                         }
                               >
