@@ -101,11 +101,11 @@ class Dashboard extends Component {
                         name="eventPoints"
                         placeholder="Enter Points Earned:"
                     />
-                    <CalendarDate
-                        value={this.state.date}
+                    <Input 
+                        value={this.state.sponsor}
                         onChange={this.handleInputChange}
-                        name="date"
-                        placeholder="Date:"
+                        name="sponsor"
+                        placeholder="Enter sponsor:"
                     />
 
                     <Dropdown>
