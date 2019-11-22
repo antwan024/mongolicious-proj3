@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="container black-text">
             © 2019 Copyright BL
             <a className="black-text right" href="#!">
-              More Links
+              Links
             </a>
           </div>
         </div>
