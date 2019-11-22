@@ -9,24 +9,39 @@ mongoose.connect(
 
 const eventSeed = [
   {
-        eventPoints: 25,
+        eventPoints: 250,
         summary: "Attended a LiveNation event.",
-        date: "2020-1-15",
+        date: "10/31/20",
   },
   {
-        eventPoints: 50,
-        summary: "Traveled out of state, flying with United.",
-        date: "2021-2-15",
+        eventPoints: 500,
+        summary: "Traveled with United.",
+        date: "1/3/21",
   },
   {
-        eventPoints: 10,
+        eventPoints: 100,
         summary: "Went to a Comedyworks show.",
-        date: "2020-3-30",
+        date: "5/21/21",
   },
   {
         eventPoints: 50,
         summary: "Watched a movie in a Regal Theater.",
+        date: "5/30/20",
+  },
+  {
+        eventPoints: 100,
+        summary: "Went to a Comedyworks show.",
+        date: "10/31/20",
+  },
+  {
+        eventPoints: 10,
+        summary: "1-hour workout at 24-Hour Fitness.",
         date: "2020-3-30",
+  },
+  {
+      eventPoints: 50,
+      summary: "Did a CorePower Yoga Session.",
+      date: "2020-3-30",
   }
 ];
 
