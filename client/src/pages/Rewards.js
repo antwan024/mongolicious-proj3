@@ -3,6 +3,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/List";
 import AchievementCard from "../components/AchievementCard";
+import Nav from "../components/Nav";
 import { Z_BLOCK } from "zlib";
 
 class Achievement extends Component {
@@ -48,9 +49,11 @@ class Achievement extends Component {
   };
 
   render() {
+    const { totalPoints } = this.props.location
     return (
       <div>
-        <h2>Total Points: 0{this.getPoints}</h2>
+        <Nav />
+        <h2>Total Points: {totalPoints}</h2>
         <div className="row">
           <div className="col s9 m9">
             {this.state.achievements.map(achievement => (

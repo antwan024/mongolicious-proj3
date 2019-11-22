@@ -10,11 +10,17 @@ import SignIn from "./pages/SignIn";
 import "./App.css";
 import NewUser from "./pages/NewUser";
 
+
+
+
 function App() {
+
+
+
   return (
     <Router>
       <div>
-        <Nav />
+        {/* <Nav /> */}
         <div className="body">
           <Switch>
             <Route exact path="/" component={SignIn} />
@@ -34,5 +40,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

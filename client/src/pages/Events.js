@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import TaskInput from "../components/TaskInput";
-import { Input, FormBtn } from "../components/Form";
+import { CardBtn, Input, FormBtn } from "../components/Form";
 import { Link } from "react-router-dom";
 import AchievementCard from "../components/AchievementCard";
 import API from "../utils/API";
+import Nav from "../components/Nav";
 
-class Events extends Component {
+class Events extends React.Component {
 
       state = {
       events: [],
       eventPoints: 0,
       summary: "",
+      sponsor: "",
       date: "",
       voucherCode: "",
       totalPoints: 0,
@@ -83,11 +85,26 @@ class Events extends Component {
 
     };
 
+   
+
+
+      
+
+  
+
 
 
     render() {
+
+      
+     
+      
         return (
           <div>
+            <Nav />
+         
+          <div>
+            
             <h2>Total Points: {this.state.totalPoints}</h2>
             <div className="col s6 m6">
                 <form>
@@ -119,19 +136,41 @@ class Events extends Component {
                       <Link to={"/events"}>
                         <AchievementCard key={event._id}>
                           <div className="card-image">
-                            <img src="/images/dog.jpg"/>
+                            {/* <img src="/images/dog.jpg"/> */}
+                            {/* <img src =  {event.sponsor == "regal" ? "/images/dog.jpg" : "/images/best.jpg"}/> */}
+                            <img src =  
+                                        {(() => {
+                                          switch (event.sponsor) {
+                                            case "regal": return "/images/dog.jpg";
+                                            case "united": return "/images/wellness.jpeg";
+                                            case "blue":  return "#0000FF";
+                                            default:      return "/images/best.jpg";
+                                          }
+                                        })()}
+                            
+                            
+                            />
+                           
+                            
+                            
+                            />
                             <a className="btn-floating halfway-fab waves-effect waves-light red">
                               <i
                                 className="material-icons"
                                 onClick={() => {
                                                   this.state.totalPoints = this.state.totalPoints + event.eventPoints;
-                                                  this.deleteEvent(event._id)
+                                                  this.props.history.push({
+                                                    pathname: '/achievements',
+                                                    totalPoints: this.state.totalPoints // your data array of objects
+                                                  })
+                                                  // this.deleteEvent(event._id)
                                                }
                                         }
                               >
                                 add
                               </i>
                             </a>
+                            
                           </div>
                           <span className="card-title">
                           {event.eventPoints} Points
@@ -144,6 +183,9 @@ class Events extends Component {
                 </div>
             </div>
         </div>
+        <script src="../src/misc/jquery.js"></script>
+        </div>
+        
             
 
         );

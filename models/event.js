@@ -6,7 +6,8 @@ const eventSchema = new Schema({
     eventPoints: { type: Number, required: true },
     summary: String,
     date: { type: Date, default: Date.now },
-    voucherCode: String
+    voucherCode: String,
+    sponsor: String
 
 });
 

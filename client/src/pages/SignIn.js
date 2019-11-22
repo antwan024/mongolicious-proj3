@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Input, FormBtn } from "../components/Form";
 
 import API from "../utils/API";
+import Nav from "../components/Nav";
 
 class SignIn extends Component {
 
@@ -70,7 +71,13 @@ class SignIn extends Component {
 
     render() {
         return (
+
+          <div>
+            <Nav />
+          
             <div>
+             
+             
                 {/* <h1>Please sign in:</h1>
                 <form>
                     <Input 
@@ -134,6 +141,7 @@ class SignIn extends Component {
 
                 
                 <script src="./../src/misc/jquery.js"></script>
+            </div>
             </div>
             
         );

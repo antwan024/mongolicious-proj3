@@ -25,12 +25,31 @@ export function FormBtn(props) {
   );
 }
 
+
+export function CardBtn({props}) {
+
+  return(
+    <a className="btn-floating halfway-fab waves-effect waves-light red">
+    <i
+      className="material-icons"
+      {...props.children}
+    >
+      add
+    </i>
+  </a>
+
+
+  );
+}
+
 export function CalendarDate(props) {
   return(
     <div>
-      <input {...props} type="text" class="datepicker"></input>
-      
+      <input {...props} type="text" className="datepicker"></input>
+      <script src="../misc/jquery"></script>
     </div>
+
+
     
       
   ); 
