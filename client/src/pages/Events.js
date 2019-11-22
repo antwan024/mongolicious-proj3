@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import AchievementCard from "../components/AchievementCard";
 import API from "../utils/API";
 import Nav from "../components/Nav";
+import "./styles.css";
 
 class Events extends React.Component {
 
@@ -106,40 +107,20 @@ class Events extends React.Component {
           <div>
             
             <h2>Total Points: {this.state.totalPoints}</h2>
-            <div className="col s6 m6">
-                <form>
-                    <Input 
-                        value={this.state.summary}
-                        onChange={this.handleInputChange}
-                        name="summary"
-                        placeholder="Summary (required)"
-                    />
-                    <Input 
-                        value={this.state.eventPoints}
-                        onChange={this.handleInputChange}
-                        name="points"
-                        placeholder="Enter points:"
-                    />
-                    
-                    
-                    <FormBtn 
-                        onClick={this.handleFormSubmit}
-                    >Commit!</FormBtn>
-                  
-                </form>
-            </div>
+           
 
             <div>
                 <div className="row">
                   <div className="col s12 m12">
                     {this.state.events.map(event => (
                       // <Link to={"/events" + event._id}>
-                      <Link to={"/events"}>
+                      
                         <AchievementCard key={event._id}>
-                          <div className="card-image">
+                          <div className="card-image" >
                             {/* <img src="/images/dog.jpg"/> */}
                             {/* <img src =  {event.sponsor == "regal" ? "/images/dog.jpg" : "/images/best.jpg"}/> */}
-                            <img src =  
+                            <div>
+                            <img className="image" src =  
                                         {
                                           (() => {
                                               switch (event.sponsor) {
@@ -154,10 +135,17 @@ class Events extends React.Component {
                                           })()
                                         }
                             />
-                           
+                           </div>
                             
                             
-                            />
+                            
+                            
+                          </div>
+                          <span className="card-title">
+                          {event.eventPoints} Points
+                          </span>
+                          {event.summary}
+                          
                             <a className="btn-floating halfway-fab waves-effect waves-light red">
                               <i
                                 className="material-icons"
@@ -175,13 +163,8 @@ class Events extends React.Component {
                               </i>
                             </a>
                             
-                          </div>
-                          <span className="card-title">
-                          {event.eventPoints} Points
-                          </span>
-                          {event.summary}
                         </AchievementCard>
-                      </Link>
+                      
                     ))}
                   </div>
                 </div>
