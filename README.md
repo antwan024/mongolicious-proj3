@@ -18,10 +18,10 @@ Check out this app here: https://...herokuapp.com
 
 ### Screenshot
 ##### Homepage
-![Screenshot of home page]()
+![Screenshot of home page](https://github.com/antwan024/mongolicious-proj3/blob/master/client/public/images/Screen%20Shot%202019-11-22%20at%203.21.23%20PM.png)
 
 
-### Author
+### Authors
 * Anthony Nguyen
 * Daniel Taquez
 * Marcel Carey
