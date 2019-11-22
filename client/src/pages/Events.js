@@ -95,6 +95,10 @@ class Events extends React.Component {
 
 
     render() {
+
+      
+     
+      
         return (
           <div>
             <Nav />
@@ -133,7 +137,22 @@ class Events extends React.Component {
                         <AchievementCard key={event._id}>
                           <div className="card-image">
                             {/* <img src="/images/dog.jpg"/> */}
-                            <img src =  {event.sponsor == "regal" ? "/images/dog.jpg" : "/images/best.jpg"}                    
+                            {/* <img src =  {event.sponsor == "regal" ? "/images/dog.jpg" : "/images/best.jpg"}/> */}
+                            <img src =  
+                                        {(() => {
+                                          switch (event.sponsor) {
+                                            case "regal": return "/images/dog.jpg";
+                                            case "united": return "/images/wellness.jpeg";
+                                            case "blue":  return "#0000FF";
+                                            default:      return "/images/best.jpg";
+                                          }
+                                        })()}
+                            
+                            
+                            />
+                           
+                            
+                            
                             />
                             <a className="btn-floating halfway-fab waves-effect waves-light red">
                               <i
