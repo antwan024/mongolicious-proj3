@@ -8,6 +8,7 @@ const userSchema = new Schema({
     totalEventPoints: Number, 
     totalFoodPoints: Number, 
     totalWorkoutPoints: Number,
+    googleId: String,
 
     userEvent: [
         {
