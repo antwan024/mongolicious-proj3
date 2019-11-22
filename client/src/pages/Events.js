@@ -128,8 +128,9 @@ class Events extends React.Component {
                                                 case "united": return "/images/united.jpg";
                                                 case "comedyworks":  return "/images/comedy.jpg";
                                                 case "livenation":  return "/images/livenation.jpg";
-                                                case "24hour":  return "/images/24hour.jpg";
-                                                case "corepower":  return "/images/corepower.png";
+                                                case "24 hour fitness":  return "/images/24hour.jpg";
+                                                case "corepower yoga":  return "/images/corepower.png";
+                                                case "whoe foods":  return "/images/wholefoods.jpg";
                                                 default:      return "/images/best.jpg";
                                               }
                                           })()
