@@ -10,7 +10,7 @@ This is a web application developed using React. The User Interface in this appl
 *   Node.js
 *   Heroku
 
-### How to play this game:
+### How to use this app:
 Click on ....
 
 ### Link
