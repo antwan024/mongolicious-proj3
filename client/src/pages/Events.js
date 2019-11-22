@@ -122,55 +122,84 @@ class Events extends React.Component {
           </div>
 
           <div>
-            <div className="row">
-              <div className="col s12 m12">
-                {this.state.events.map(event => (
-                  // <Link to={"/events" + event._id}>
-                  <Link to={"/events"}>
-                    <AchievementCard key={event._id}>
-                      <div className="card-image">
-                        {/* <img src="/images/dog.jpg"/> */}
-                        {/* <img src =  {event.sponsor == "regal" ? "/images/dog.jpg" : "/images/best.jpg"}/> */}
-                        <img
-                          src={(() => {
-                            switch (event.sponsor) {
-                              case "regal":
-                                return "/images/dog.jpg";
-                              case "united":
-                                return "/images/wellness.jpeg";
-                              case "blue":
-                                return "#0000FF";
-                              default:
-                                return "/images/best.jpg";
-                            }
-                          })()}
-                        />
+   
+            <h2>Total Points: {this.state.totalPoints}</h2>
+            <div className="col s6 m6">
+                <form>
+                    <Input 
+                        value={this.state.summary}
+                        onChange={this.handleInputChange}
+                        name="summary"
+                        placeholder="Summary (required)"
+                    />
+                    <Input 
+                        value={this.state.eventPoints}
+                        onChange={this.handleInputChange}
+                        name="points"
+                        placeholder="Enter points:"
+                    />
+                    
+                    <FormBtn 
+                        onClick={this.handleFormSubmit}
+                    >Commit!</FormBtn>
+                  
+                </form>
+            </div>
 
-                        <a className="btn-floating halfway-fab waves-effect waves-light red">
-                          <i
-                            className="material-icons"
-                            onClick={() => {
-                              this.state.totalPoints =
-                                this.state.totalPoints + event.eventPoints;
-                              this.props.history.push({
-                                pathname: "/achievements",
-                                totalPoints: this.state.totalPoints // your data array of objects
-                              });
-                              // this.deleteEvent(event._id)
-                            }}
-                          >
-                            add
-                          </i>
-                        </a>
-                      </div>
-                      <span className="card-title">
-                        {event.eventPoints} Points
-                      </span>
-                      {event.summary}
-                    </AchievementCard>
-                  </Link>
-                ))}
-              </div>
+            <div>
+                <div className="row">
+                  <div className="col s12 m12">
+                    {this.state.events.map(event => (
+                      // <Link to={"/events" + event._id}>
+                      <Link to={"/events"}>
+                        <AchievementCard key={event._id}>
+                          <div className="card-image">
+                            {/* <img src="/images/dog.jpg"/> */}
+                            {/* <img src =  {event.sponsor == "regal" ? "/images/dog.jpg" : "/images/best.jpg"}/> */}
+                            <img src =  
+                                        {
+                                          (() => {
+                                              switch (event.sponsor) {
+                                                case "regal": return "/images/dog.jpg";
+                                                case "united": return "/images/wellness.jpeg";
+                                                case "comedyworks":  return "/images/comedy.jpg";
+                                                default:      return "/images/best.jpg";
+                                              }
+                                          })()
+                                        }
+                            />
+                           
+                            
+                            
+                            />
+                            <a className="btn-floating halfway-fab waves-effect waves-light red">
+                              <i
+                                className="material-icons"
+                                onClick={() => {
+                                                  this.state.totalPoints = this.state.totalPoints + event.eventPoints;
+                                                  this.props.history.push({
+                                                    pathname: '/achievements',
+                                                    totalPoints: this.state.totalPoints // your data array of objects
+                                                  })
+                                                  // this.deleteEvent(event._id)
+                                               }
+                                        }
+                              >
+                                add
+                              </i>
+                            </a>
+                            
+                          </div>
+                          <span className="card-title">
+                          {event.eventPoints} Points
+                          </span>
+                          {event.summary}
+                        </AchievementCard>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
             </div>
           </div>
         </div>
