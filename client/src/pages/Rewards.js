@@ -5,6 +5,7 @@ import { List, ListItem } from "../components/List";
 import AchievementCard from "../components/AchievementCard";
 import Nav from "../components/Nav";
 import { Z_BLOCK } from "zlib";
+import reward from "../reward.png";
 
 class Achievement extends Component {
   state = {
@@ -53,6 +54,8 @@ class Achievement extends Component {
     return (
       <div>
         <Nav />
+        <img src={reward} alt="Achievement Pic" />
+        <div className="container">
         <h2>Total Points: {totalPoints}</h2>
         <div className="row">
           <div className="col s9 m9">
@@ -80,6 +83,7 @@ class Achievement extends Component {
           </div>
           
         </div>
+      </div>
       </div>
     );
   }

@@ -99,7 +99,7 @@ class Events extends React.Component {
     return (
       <div>
         <Nav />
-
+        <div className="container">
         <div>
           <h2>Total Points: {this.state.totalPoints}</h2>
           <div className="col s6 m6">
@@ -120,7 +120,7 @@ class Events extends React.Component {
               <FormBtn onClick={this.handleFormSubmit}>Commit!</FormBtn>
             </form>
           </div>
-
+          </div>
           <div>
    
             <h2>Total Points: {this.state.totalPoints}</h2>
