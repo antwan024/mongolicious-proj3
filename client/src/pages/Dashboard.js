@@ -4,6 +4,7 @@ import { CalendarDate, Input, FormBtn } from "../components/Form";
 import {Dropdown, DropItem} from "../components/List";
 import Nav from "../components/Nav";
 import API from "../utils/API";
+import life from "../life.png";
 
 class Dashboard extends Component {
 
@@ -82,12 +83,17 @@ class Dashboard extends Component {
     render() {
         return (
           <div>
+
+            <img src={life} alt="A Pic"/>
+            <div className="container">
+
              <Nav /> 
           
           <div>
            
             <h2>Total Points: {this.addPoints}</h2>
             <div className="col s9 m9">
+
                 <form>
                     <Input 
                         value={this.state.summary}
@@ -128,7 +134,6 @@ class Dashboard extends Component {
                   
                 </form>
 
-                
                 <script src="./../src/misc/jquery.js"></script>
             </div>
             </div>
