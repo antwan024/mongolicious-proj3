@@ -9,7 +9,6 @@ const Nav = props => {
         <Link to={"/dashboard"}>
           <a
             {...props}
-            // href="/dashboard"
             href="#"
             className="brand-logo center black-text"
           >
@@ -20,23 +19,25 @@ const Nav = props => {
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li>
             <Link to={"/dashboard"}>
-              <a {...props} href="#">
+              <a {...props} href="/#">
                 <i className="material-icons black-text">home</i>
               </a>
               </Link>
             </li>
             <li>
-
-              <a {...props} href="/events">
-                <i className="material-icons black-text">stars</i>
-              </a>
-            </li>
-            <li>
-              <a {...props} href="/achievements" className="black-text">
+            <Link to={"/achievements"}>
+              <a {...props} href="#" className="black-text">
                 <i className="material-icons black-text">check_circle</i>
               </a>
+              </Link>
             </li>
-            
+            <li>
+            <Link to={"/events"}>
+              <a {...props} href="#">
+                <i className="material-icons black-text">stars</i>
+              </a>
+              </Link>
+            </li>
           </ul>
           <ul id="nav-mobile" className="right">
             <li>
@@ -49,7 +50,7 @@ const Nav = props => {
             </li>
             <li>
               <a
-                href="/newUser"
+                href="newUser"
                 className="waves-effect waves-light btn-small black"
               >
                 Sign Up
