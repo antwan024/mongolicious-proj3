@@ -5,9 +5,10 @@ import { List, ListItem } from "../components/List";
 import AchievementCard from "../components/AchievementCard";
 import Nav from "../components/Nav";
 import TotalPoints from "../components/TotalPoints";
+import "./styles.css";
 
 let styles = {
-  width: "80%"
+  float: "right"
 };
 
 class Achievement extends Component {
@@ -52,30 +53,47 @@ class Achievement extends Component {
     });
   };
 
+  addPoints = () => {
+    API.addPoints()
+      .then(res =>
+        this.setState({
+          points: res.data
+        })
+      )
+      .catch(err => console.log(err));
+  };
+
+  onClickAction = id => {
+    this.deleteAchievement(id);
+    this.addPoints();
+  };
+
   render() {
     // const { totalPoints } = this.props.location;
     return (
       <div>
         <Nav />
 
-        <h2>Total Points: {TotalPoints}</h2>
-        <div className="row cards" style={styles}>
+        <TotalPoints />
+
+        <div className="row">
           {this.state.achievements.map(achievement => (
             <Link to={"/achievements/" + achievement._id}>
               <div className="col s4">
                 <AchievementCard key={achievement._id}>
                   <div className="card-image">
                     <img src="/images/wellness.jpeg" />
-                    <a className="btn-floating halfway-fab waves-effect waves-light red">
-                      <i
-                        className="material-icons"
-                        onClick={() => this.deleteAchievement(achievement._id)}
-                      >
-                        add
-                      </i>
-                    </a>
                   </div>
-                  <span className="card-title">
+                  <a className="btn-floating halfway-fab waves-effect waves-light green lighten-4">
+                    <i
+                      className="material-icons"
+                      onClick={() => this.onClickAction(achievement._id)}
+                      style={styles}
+                    >
+                      add
+                    </i>
+                  </a>
+                  <span className="card-title achievement">
                     Use {achievement.achievementPoints} Points
                   </span>
                   {achievement.summary}

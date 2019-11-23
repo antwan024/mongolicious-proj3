@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import API from "../../utils/API";
+import "./styles.css";
 
 class TotalPoints extends Component {
   state = {
@@ -22,11 +24,17 @@ class TotalPoints extends Component {
   render() {
     return (
       <div>
-        <ul class="collection with-header">
-          <li class="collection-header">
-            <h4>Total Points: {this.state.points}</h4>
-          </li>
-        </ul>
+        <div className="row">
+          <div className="col s4"></div>
+          <div className="col s4">
+            <ul className="collection with-header">
+              <li className="collection-header indigo lighten-5">
+                Total Points: {this.state.points}
+              </li>
+            </ul>
+          </div>
+          <div className="col s4"></div>
+        </div>
       </div>
     );
   }

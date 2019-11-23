@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Achievement from "./pages/Rewards";
+import Achievement from "./pages/Achievement";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
 import Events from "./pages/Events";
@@ -10,17 +9,10 @@ import SignIn from "./pages/SignIn";
 import "./App.css";
 import NewUser from "./pages/NewUser";
 
-
-
-
 function App() {
-
-
-
   return (
     <Router>
       <div>
-        {/* <Nav /> */}
         <div className="body">
           <Switch>
             <Route exact path="/" component={SignIn} />
@@ -40,6 +32,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;

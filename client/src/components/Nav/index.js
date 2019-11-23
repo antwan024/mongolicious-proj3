@@ -1,13 +1,17 @@
 import React from "react";
-// import "./styles.css";
+import "./styles.css";
 
-const Nav = (props) => {
+const Nav = props => {
   return (
     <div>
       <nav>
-        <div className="nav-wrapper white ">
-          <a {...props} href="/dashboard" className="brand-logo center black-text">
-            Best Life 
+        <div className="nav-wrapper white z-depth-0">
+          <a
+            {...props}
+            href="/dashboard"
+            className="brand-logo center black-text"
+          >
+            Best Life
             <p {...props} id="user" class="text-fix"></p>
           </a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
@@ -29,10 +33,20 @@ const Nav = (props) => {
           </ul>
           <ul id="nav-mobile" className="right">
             <li>
-              <a href="/" className="waves-effect waves-light btn-small black">Login</a>
+              <a
+                href="/"
+                className="waves-effect waves-light btn-small transparent black-text z-depth-0"
+              >
+                Login
+              </a>
             </li>
             <li>
-              <a href="newUser" className="waves-effect waves-light btn-small black">Sign Up</a>
+              <a
+                href="newUser"
+                className="waves-effect waves-light btn-small black"
+              >
+                Sign Up
+              </a>
             </li>
           </ul>
         </div>
