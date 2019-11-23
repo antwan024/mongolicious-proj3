@@ -102,7 +102,7 @@ class Events extends React.Component {
       <div>
         <Nav />
 
-        <TotalPoints />
+        <h2>Total Points: {this.state.totalPoints}</h2>
 
         <div className="row">
           {this.state.events.map(event => (
@@ -144,7 +144,7 @@ class Events extends React.Component {
                       this.state.totalPoints =
                         this.state.totalPoints + event.eventPoints;
                       this.props.history.push({
-                        pathname: "/achievements",
+                        pathname: "/events",
                         totalPoints: this.state.totalPoints // your data array of objects
                       });
                       this.deleteEvent(event._id);

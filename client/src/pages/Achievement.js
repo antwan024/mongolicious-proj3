@@ -74,7 +74,7 @@ class Achievement extends Component {
       <div>
         <Nav />
 
-        <TotalPoints />
+       
 
         <div className="row">
           {this.state.achievements.map(achievement => (
