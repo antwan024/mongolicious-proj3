@@ -33,7 +33,7 @@ export default {
     return axios.post("/api/events", eventData);
   },
   addPoints: function(eventData) {
-    return axios.post("/api/events/addPoints", eventData)
+    return axios.post("/api/events/addPoints", eventData);
   },
 
   saveUser: function(userData) {
@@ -45,6 +45,4 @@ export default {
   getUser: function(id) {
     return axios.get("/api/user/" + id);
   }
-
-
 };
