@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Input, FormBtn } from "../components/Form";
 
 import API from "../utils/API";
+import Nav from "../components/Nav";
 
 class SignIn extends Component {
 
@@ -70,7 +71,13 @@ class SignIn extends Component {
 
     render() {
         return (
+
+          <div>
+            <Nav />
+          
             <div>
+             
+             
                 {/* <h1>Please sign in:</h1>
                 <form>
                     <Input 
@@ -94,16 +101,16 @@ class SignIn extends Component {
                   
                 </form> */}
 
-                <div class="container center-align">
-    <div class="row center-align">
-        <div class="col s12 m6 center-align" >
-            <div class="card blue light-3 center-align">
-                <div class="card-content white-text center-align">
-                    <span class="card-title">Log In</span>
+                <div className="container center-align">
+    <div className="row center-align">
+        <div className="col s12 m6 center-align" >
+            <div className="card blue light-3 center-align">
+                <div className="card-content white-text center-align">
+                    <span className="card-title">Log In</span>
                 </div>
-                <div class="card-action">
+                <div className="card-action">
 
-                    <div class="row">
+                    <div className="row">
                     <form>
                     <Input 
                         value={this.state.summary}
@@ -134,6 +141,7 @@ class SignIn extends Component {
 
                 
                 <script src="./../src/misc/jquery.js"></script>
+            </div>
             </div>
             
         );

@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/List";
 import AchievementCard from "../components/AchievementCard";
 import Nav from "../components/Nav";
-import { Z_BLOCK } from "zlib";
+import TotalPoints from "../components/TotalPoints";
+
+let styles = {
+  width: "80%"
+};
 
 class Achievement extends Component {
   state = {
@@ -49,15 +53,16 @@ class Achievement extends Component {
   };
 
   render() {
-    const { totalPoints } = this.props.location
+    // const { totalPoints } = this.props.location;
     return (
       <div>
         <Nav />
-        <h2>Total Points: {totalPoints}</h2>
-        <div className="row">
-          <div className="col s9 m9">
-            {this.state.achievements.map(achievement => (
-              <Link to={"/achievements/" + achievement._id}>
+
+        <h2>Total Points: {TotalPoints}</h2>
+        <div className="row cards" style={styles}>
+          {this.state.achievements.map(achievement => (
+            <Link to={"/achievements/" + achievement._id}>
+              <div className="col s4">
                 <AchievementCard key={achievement._id}>
                   <div className="card-image">
                     <img src="/images/wellness.jpeg" />
@@ -75,10 +80,9 @@ class Achievement extends Component {
                   </span>
                   {achievement.summary}
                 </AchievementCard>
-              </Link>
-            ))}
-          </div>
-          
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     );

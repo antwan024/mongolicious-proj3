@@ -20,7 +20,7 @@ export function ListItem({ children }) {
 export function Dropdown({ children }) {
   return (
 
-    <div className="input-field col s8">
+    <div type = "text" className="select col s8">
     <select>
       <option value="" disabled selected>Choose your option</option>
       {children}

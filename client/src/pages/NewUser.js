@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { Input, FormBtn } from "../components/Form";
+import Nav from "../components/Nav";
 
 import API from "../utils/API";
 
@@ -70,7 +71,12 @@ class NewUser extends Component {
 
     render() {
       return (
+
+        <div>
+          <Nav />
+       
           <div>
+            
               {/* <h1>Please sign in:</h1>
               <form>
                   <Input 
@@ -99,7 +105,7 @@ class NewUser extends Component {
       <div class="col s12 m6 center-align" >
           <div class="card green light-3 center-align">
               <div class="card-content white-text center-align">
-                  <span class="card-title">Log In</span>
+                  <span class="card-title">Enter New User Info:</span>
               </div>
               <div class="card-action">
 
@@ -140,6 +146,7 @@ class NewUser extends Component {
 
               
               <script src="./../src/misc/jquery.js"></script>
+          </div>
           </div>
           
       );

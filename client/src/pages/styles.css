@@ -1,0 +1,17 @@
+.card-image {
+    float: left;
+    text-align: center;
+    height: 125px;
+    width: 125px;
+    overflow: hidden;
+    
+}
+
+
+
+ 
+.main {
+
+    max-width:100%;
+    max-height:100%;
+}
