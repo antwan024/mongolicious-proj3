@@ -6,21 +6,27 @@ const Nav = props => {
     <div>
       <nav>
         <div className="nav-wrapper white z-depth-0">
+        <Link to={"/dashboard"}>
           <a
             {...props}
-            href="/dashboard"
+            // href="/dashboard"
+            href="#"
             className="brand-logo center black-text"
           >
             Best Life
             <p {...props} id="user" class="text-fix"></p>
           </a>
+          </Link>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li>
+            <Link to={"/dashboard"}>
               <a {...props} href="/dashboard">
                 <i className="material-icons black-text">home</i>
               </a>
+              </Link>
             </li>
             <li>
+              
               <a {...props} href="/events">
                 <i className="material-icons black-text">stars</i>
               </a>
