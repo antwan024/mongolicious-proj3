@@ -42,19 +42,13 @@ const eventSeed = [
         eventPoints: 10,
         summary: "1-hour workout at 24-Hour Fitness.",
         date: "2020-3-30",
-        sponsor: "24 hour fitness"
+        sponsor: "24hour"
   },
   {
       eventPoints: 50,
       summary: "Did a CorePower Yoga Session.",
       date: "2020-3-30",
-      sponsor: "corepower yoga"
-  },
-  {
-      eventPoints: 75,
-      summary: "Bought fruit at Whole Foods.",
-      date: "2020-3-30",
-      sponsor: "whole foods"
+      sponsor: "corepower"
   }
 ];
 
