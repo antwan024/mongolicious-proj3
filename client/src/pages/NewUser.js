@@ -105,7 +105,7 @@ class NewUser extends Component {
       <div class="col s12 m6 center-align" >
           <div class="card green light-3 center-align">
               <div class="card-content white-text center-align">
-                  <span class="card-title">Log In</span>
+                  <span class="card-title">Enter New User Info:</span>
               </div>
               <div class="card-action">
 

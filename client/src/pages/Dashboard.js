@@ -11,6 +11,7 @@ class Dashboard extends Component {
     events: [],
     eventPoints: "",
     summary: "",
+    sponsor: "",
     date: "",
     voucherCode: "",
     totalPoints: ""
@@ -27,6 +28,7 @@ class Dashboard extends Component {
           events: res.data,
           eventPoints: 0,
           summary: "",
+          sponsor: "",
           date: "",
           voucherCode: ""
         })
@@ -54,6 +56,7 @@ class Dashboard extends Component {
         summary: this.state.summary,
         date: this.state.date,
         voucherCode: this.state.voucherCode,
+        sponsor: this.state.sponsor,
         eventPoints: this.state.eventPoints
       })
         .then(res => this.loadEvents())
@@ -84,10 +87,12 @@ class Dashboard extends Component {
     return (
       <div>
         <Nav />
-        <img src={life} alt="A Pic" />
+        <div>
+        <img className = "main" src={life} alt="A Pic" />
+        </div>
         <div className="container">
           <div>
-            <h2>Total Points: {this.addPoints}</h2>
+            <h3>Total Points: {this.addPoints}</h3>
             <div className="col s9 m9">
               <form>
                 <Input
@@ -102,26 +107,40 @@ class Dashboard extends Component {
                   name="eventPoints"
                   placeholder="Enter Points Earned:"
                 />
-                <CalendarDate
-                  value={this.state.date}
+                <Input
+                  value={this.state.sponsor}
                   onChange={this.handleInputChange}
-                  name="date"
-                  placeholder="Date:"
+                  name="sponsor"
+                  placeholder="Enter Sponsor:"
                 />
 
-                <Dropdown>
+                <select>
                   {this.state.events.map(event => (
-                    <DropItem key={event._id}>
+                    <option key={event._id}>
                       {event.eventPoints} points for {event.summary}
                       {/* <DeleteBtn onClick={() => this.deleteEvent(event._id)} /> */}
-                    </DropItem>
+                    </option>
                   ))}
-                </Dropdown>
+                </select>
 
                 <FormBtn onClick={this.handleFormSubmit}>Commit</FormBtn>
               </form>
+              <div>
+              <form onSubmit={this.handleInputChange}>
+                  <label>
+                    Pick your favorite flavor:
+                    <select onChange={this.handleInputChange}>
+                      <option value="grapefruit">Grapefruit</option>
+                      <option value="lime">Lime</option>
+                      <option value="coconut">Coconut</option>
+                      <option value="mango">Mango</option>
+                    </select>
+                  </label>
+                  <input type="submit" value="Submit" />
+              </form>
+              </div>
 
-              <script src="./../src/misc/jquery.js"></script>
+              <script src="./jquery"></script>
             </div>
           </div>
         </div>
