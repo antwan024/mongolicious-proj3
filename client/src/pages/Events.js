@@ -108,10 +108,10 @@ class Events extends React.Component {
             
             <h2>Total Points: {this.state.totalPoints}</h2>
            
-
+            <div className = "container">
             <div>
                 <div className="row">
-                  <div className="col s12 m12">
+                  <div>
                     {this.state.events.map(event => (
                       // <Link to={"/events" + event._id}>
                       
@@ -173,7 +173,7 @@ class Events extends React.Component {
         </div>
         <script src="../src/misc/jquery.js"></script>
         </div>
-        
+        </div>
             
 
         );
