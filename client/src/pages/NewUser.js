@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import { Input, FormBtn } from "../components/Form";
 import Nav from "../components/Nav";
 
@@ -132,10 +132,9 @@ class NewUser extends Component {
                   
                   
 
-                  <FormBtn 
-                      onClick={this.handleUserSubmit}
-                  >Send</FormBtn>
-                
+                  <Link to={"/dashboard"}>
+                    <a href="#">Log In</a>
+                    </Link>
               </form>
                   </div>
               </div>

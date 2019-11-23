@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import { Input, FormBtn } from "../components/Form";
 
 import API from "../utils/API";
@@ -67,86 +67,105 @@ class SignIn extends Component {
       }
     };
 
+    
+    // valUser = event  => {
+    //     event.preventDefault();
+    //     User.find({$or: [
+    //       {email: this.state.email},
+    //       {password: this.state.password}
+    //       ]}), 
+    //       function(err, docs) {
+    //           if (docs.length){
+    //             <Link to={"/dashboard"}/>
+    //           }else{
+    //               user.save(function(err){
+    //                 alert("Incorrect!");
+    //               });
+    //           }
+    //       }
+
+    // };
 
 
+
+    
     render() {
-        return (
+      return (
 
+        <div>
+          <Nav />
+       
           <div>
-            <Nav />
-          
-            <div>
-             
-             
-                {/* <h1>Please sign in:</h1>
-                <form>
-                    <Input 
-                        value={this.state.summary}
-                        onChange={this.handleInputChange}
-                        name="summary"
-                        placeholder="Enter Email:"
-                    />
-                    <Input 
-                        value={this.state.password}
-                        onChange={this.handleInputChange}
-                        name="password"
-                        placeholder="Enter Password:"
-                    />
-                    
-                    
-
-                    <FormBtn 
-                        onClick={this.handleUserSubmit}
-                    >Commit</FormBtn>
-                  
-                </form> */}
-
-                <div className="container center-align">
-    <div className="row center-align">
-        <div className="col s12 m6 center-align" >
-            <div className="card blue light-3 center-align">
-                <div className="card-content white-text center-align">
-                    <span className="card-title">Log In</span>
-                </div>
-                <div className="card-action">
-
-                    <div className="row">
-                    <form>
-                    <Input 
-                        value={this.state.summary}
-                        onChange={this.handleInputChange}
-                        name="summary"
-                        placeholder="Enter Email:"
-                    />
-                    <Input 
-                        value={this.state.password}
-                        onChange={this.handleInputChange}
-                        name="password"
-                        placeholder="Enter Password:"
-                    />
-                    
-                    
-
-                    <FormBtn 
-                        onClick={this.handleUserSubmit}
-                    >Send</FormBtn>
-                  
-                </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-                
-                <script src="./../src/misc/jquery.js"></script>
-            </div>
-            </div>
             
-        );
-    }
+              {/* <h1>Please sign in:</h1>
+              <form>
+                  <Input 
+                      value={this.state.summary}
+                      onChange={this.handleInputChange}
+                      name="summary"
+                      placeholder="Enter Email:"
+                  />
+                  <Input 
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      name="password"
+                      placeholder="Enter Password:"
+                  />
+                  
+                  
+
+                  <FormBtn 
+                      onClick={this.handleUserSubmit}
+                  >Commit</FormBtn>
+                
+              </form> */}
+
+            <div class="row">
+                <div class="col s12 m6">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Please Log In:</span>
+                      <form>
+                  <Input 
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                      name="email"
+                      placeholder="Enter Email:"
+                  />
+                  <Input 
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      name="password"
+                      placeholder="Enter Password:"
+                  />
+                  
+                  
+
+                  
+                
+              </form>
+                    </div>
+                    <div class="card-action">
+                    
+                    <Link to={"/dashboard"}>
+                    <a href="#">Log In</a>
+                    </Link>
+                  
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <script src="./../src/misc/jquery.js"></script>
+          </div>
+          </div>
+          
+      );
+  }
 }
 
 export default SignIn;
+
 

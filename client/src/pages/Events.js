@@ -153,7 +153,7 @@ class Events extends React.Component {
                                 onClick={() => {
                                                   this.state.totalPoints = this.state.totalPoints + event.eventPoints;
                                                   this.props.history.push({
-                                                    pathname: '/achievements',
+                                                    pathname: '/events',
                                                     totalPoints: this.state.totalPoints // your data array of objects
                                                   })
                                                   this.deleteEvent(event._id)

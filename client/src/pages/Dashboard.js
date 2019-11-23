@@ -125,20 +125,7 @@ class Dashboard extends Component {
 
                 <FormBtn onClick={this.handleFormSubmit}>Commit</FormBtn>
               </form>
-              <div>
-              <form onSubmit={this.handleInputChange}>
-                  <label>
-                    Pick your favorite flavor:
-                    <select onChange={this.handleInputChange}>
-                      <option value="grapefruit">Grapefruit</option>
-                      <option value="lime">Lime</option>
-                      <option value="coconut">Coconut</option>
-                      <option value="mango">Mango</option>
-                    </select>
-                  </label>
-                  <input type="submit" value="Submit" />
-              </form>
-              </div>
+              
 
               <script src="./jquery"></script>
             </div>
