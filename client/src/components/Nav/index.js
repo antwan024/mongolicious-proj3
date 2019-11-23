@@ -20,13 +20,13 @@ const Nav = props => {
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li>
             <Link to={"/dashboard"}>
-              <a {...props} href="/dashboard">
+              <a {...props} href="#">
                 <i className="material-icons black-text">home</i>
               </a>
               </Link>
             </li>
             <li>
-              
+
               <a {...props} href="/events">
                 <i className="material-icons black-text">stars</i>
               </a>
