@@ -17,3 +17,7 @@ footer {
 .achievementCard {
   float: left;
 }
+
+.card {
+  margin-left: 20px;
+}

@@ -6,6 +6,10 @@ import AchievementCard from "../components/AchievementCard";
 import Nav from "../components/Nav";
 import Events from "./Events";
 
+let styles = {
+  width: "80%"
+};
+
 class Achievement extends Component {
   state = {
     achievements: [],
@@ -53,17 +57,12 @@ class Achievement extends Component {
     return (
       <div>
         <Nav />
-<<<<<<< HEAD:client/src/pages/Achievement.js
-        <h2>Total Points:</h2>
-=======
-        <img src={reward} alt="Achievement Pic" />
-        <div className="container">
+
         <h2>Total Points: {totalPoints}</h2>
->>>>>>> db8780a97e233cc44eb2a902bd93f64e1684fe94:client/src/pages/Rewards.js
-        <div className="row">
-          <div className="col s9 m9">
-            {this.state.achievements.map(achievement => (
-              <Link to={"/achievements/" + achievement._id}>
+        <div className="row cards" style={styles}>
+          {this.state.achievements.map(achievement => (
+            <Link to={"/achievements/" + achievement._id}>
+              <div className="col s4">
                 <AchievementCard key={achievement._id}>
                   <div className="card-image">
                     <img src="/images/wellness.jpeg" />
@@ -81,11 +80,10 @@ class Achievement extends Component {
                   </span>
                   {achievement.summary}
                 </AchievementCard>
-              </Link>
-            ))}
-          </div>
+              </div>
+            </Link>
+          ))}
         </div>
-      </div>
       </div>
     );
   }
