@@ -22,26 +22,34 @@ const Nav = props => {
                 <i className="material-icons black-text">home</i>
               </a>
             </Link>
-            </li>
+            
             <li>
-              <a {...props} href="achievements" className="black-text">
-                <i className="material-icons black-text">check_circle</i>
-              </a>
-            </li>
-            <li>
-              <a {...props} href="events">
+            <Link to={"/events"}>
+              <a {...props} href="#">
                 <i className="material-icons black-text">stars</i>
               </a>
+              </Link>
             </li>
+            </li>
+            <li>
+            <Link to={"/achievements"}>
+              <a {...props} href="#" className="black-text">
+                <i className="material-icons black-text">check_circle</i>
+              </a>
+              </Link>
+            </li>
+            
           </ul>
           <ul id="nav-mobile" className="right">
             <li>
+            <Link to={"/newuser"}>
               <a
                 href="/"
                 className="waves-effect waves-light btn-small transparent black-text z-depth-0"
               >
                 Login
               </a>
+              </Link>
             </li>
             <li>
               <a
