@@ -53,7 +53,13 @@ class Achievement extends Component {
     return (
       <div>
         <Nav />
+<<<<<<< HEAD:client/src/pages/Achievement.js
         <h2>Total Points:</h2>
+=======
+        <img src={reward} alt="Achievement Pic" />
+        <div className="container">
+        <h2>Total Points: {totalPoints}</h2>
+>>>>>>> db8780a97e233cc44eb2a902bd93f64e1684fe94:client/src/pages/Rewards.js
         <div className="row">
           <div className="col s9 m9">
             {this.state.achievements.map(achievement => (
@@ -79,6 +85,7 @@ class Achievement extends Component {
             ))}
           </div>
         </div>
+      </div>
       </div>
     );
   }
