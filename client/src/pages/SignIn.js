@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import { Input, FormBtn } from "../components/Form";
 
 import API from "../utils/API";
@@ -127,9 +127,9 @@ class SignIn extends Component {
                     
                     
 
-                    <FormBtn 
-                        onClick={this.handleUserSubmit}
-                    >Send</FormBtn>
+                    <Link to={"/dashboard"}>
+                    <a href="#">Log In</a>
+                    </Link>
                   
                 </form>
                     </div>
