@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Achievement from "./pages/Achievement";
 import NoMatch from "./pages/NoMatch";
 import Footer from "./components/Footer";
-import dashboard from "./pages/dashboard";
+import Dashboard from "./pages/Dashboard";
 import Events from "./pages/Events";
 import SignIn from "./pages/SignIn";
 import "./App.css";
@@ -17,7 +17,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={SignIn} />
             <Route exact path="/newuser" component={NewUser} />
-            <Route exact path="/dashboard" component={dashboard} />
+            <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/events" component={Events} />
             <Route exact path="/events/user/:id" component={Events} />
             <Route exact path="/user/:id" component={SignIn} />
