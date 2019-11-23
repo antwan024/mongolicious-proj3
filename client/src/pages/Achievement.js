@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/List";
 import AchievementCard from "../components/AchievementCard";
 import Nav from "../components/Nav";
-import { Z_BLOCK } from "zlib";
+import Events from "./Events";
 
 class Achievement extends Component {
   state = {
@@ -49,11 +49,11 @@ class Achievement extends Component {
   };
 
   render() {
-    const { totalPoints } = this.props.location
+    const { totalPoints } = this.props.location;
     return (
       <div>
         <Nav />
-        <h2>Total Points: {totalPoints}</h2>
+        <h2>Total Points:</h2>
         <div className="row">
           <div className="col s9 m9">
             {this.state.achievements.map(achievement => (
@@ -78,7 +78,6 @@ class Achievement extends Component {
               </Link>
             ))}
           </div>
-          
         </div>
       </div>
     );

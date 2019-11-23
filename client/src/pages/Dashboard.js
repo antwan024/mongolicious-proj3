@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TaskInput from "../components/TaskInput";
-import { CalendarDate, Input, FormBtn } from "../components/Form";
+import { CalendarDate, FormBtn, Input } from "../components/Form";
 import { Dropdown, DropItem } from "../components/List";
 import Nav from "../components/Nav";
 import API from "../utils/API";
@@ -87,7 +87,7 @@ class Dashboard extends Component {
         <img src={life} alt="A Pic" />
         <div className="container">
           <div>
-            <h2>Total Points: {this.addPoints}</h2>
+            {/* <h2>Total Points: {this.addPoints}</h2> */}
             <div className="col s9 m9">
               <form>
                 <Input
@@ -118,7 +118,7 @@ class Dashboard extends Component {
                   ))}
                 </Dropdown>
 
-                <FormBtn onClick={this.handleFormSubmit}>Commit</FormBtn>
+                <FormBtn onClick={this.handleFormSubmit}>Add Task</FormBtn>
               </form>
 
               <script src="./../src/misc/jquery.js"></script>

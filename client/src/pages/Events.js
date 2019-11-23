@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import TaskInput from "../components/TaskInput";
-import { CardBtn, Input, FormBtn } from "../components/Form";
 import { Link } from "react-router-dom";
 import AchievementCard from "../components/AchievementCard";
 import API from "../utils/API";
@@ -99,7 +97,9 @@ class Events extends React.Component {
     return (
       <div>
         <Nav />
-
+        <div>
+          <h2>Total Points: {this.state.totalPoints}</h2>
+        </div>
         <div>
           <div>
             <div className="row">
@@ -132,11 +132,8 @@ class Events extends React.Component {
                             onClick={() => {
                               this.state.totalPoints =
                                 this.state.totalPoints + event.eventPoints;
-                              this.props.history.push({
-                                pathname: "/achievements",
-                                totalPoints: this.state.totalPoints // your data array of objects
-                              });
-                              // this.deleteEvent(event._id)
+
+                              this.deleteEvent(event._id);
                             }}
                           >
                             add
