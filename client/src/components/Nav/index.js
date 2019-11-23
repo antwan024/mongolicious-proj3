@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.css";
-import { Link } from "react-router-dom";
 
 const Nav = props => {
   return (
@@ -17,43 +16,34 @@ const Nav = props => {
           </a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li>
-            <Link to={"/dashboard"}>
-              <a {...props} href="#">
+              <a {...props} href="/dashboard">
                 <i className="material-icons black-text">home</i>
               </a>
-            </Link>
-            
+            </li>
             <li>
-            <Link to={"/events"}>
-              <a {...props} href="#">
+              <a {...props} href="/events">
                 <i className="material-icons black-text">stars</i>
               </a>
-              </Link>
-            </li>
             </li>
             <li>
-            <Link to={"/achievements"}>
-              <a {...props} href="#" className="black-text">
+              <a {...props} href="/achievements" className="black-text">
                 <i className="material-icons black-text">check_circle</i>
               </a>
-              </Link>
             </li>
             
           </ul>
           <ul id="nav-mobile" className="right">
             <li>
-            <Link to={"/newuser"}>
               <a
                 href="/"
                 className="waves-effect waves-light btn-small transparent black-text z-depth-0"
               >
                 Login
               </a>
-              </Link>
             </li>
             <li>
               <a
-                href="newUser"
+                href="/newUser"
                 className="waves-effect waves-light btn-small black"
               >
                 Sign Up
