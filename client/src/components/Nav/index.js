@@ -26,16 +26,16 @@ const Nav = props => {
               </Link>
             </li>
             <li>
-            <Link to={"/achievements"}>
+            <Link to={"/events"}>
               <a {...props} href="#" className="black-text">
-                <i className="material-icons black-text">check_circle</i>
+                <i className="material-icons black-text">stars</i>
               </a>
               </Link>
             </li>
             <li>
-            <Link to={"/events"}>
+            <Link to={"/achievements"}>
               <a {...props} href="#">
-                <i className="material-icons black-text">stars</i>
+                <i className="material-icons black-text">check_circle</i>
               </a>
               </Link>
             </li>
