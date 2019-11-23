@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const Nav = props => {
   return (
@@ -16,9 +17,11 @@ const Nav = props => {
           </a>
           <ul id="nav-mobile" className="left hide-on-med-and-down">
             <li>
-              <a {...props} href="/dashboard">
+            <Link to={"/dashboard"}>
+              <a {...props} href="#">
                 <i className="material-icons black-text">home</i>
               </a>
+            </Link>
             </li>
             <li>
               <a {...props} href="achievements" className="black-text">
