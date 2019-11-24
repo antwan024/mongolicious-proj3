@@ -17,7 +17,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB||"mongodb://localhost/bestLife");
-mongoose.connect(process.env.MONGODB|| "mongodb://heroku_h9rvl4jg:mongo420@ds013946.mlab.com:13946/heroku_h9rvl4jg");
+mongoose.connect(process.env.MONGODB|| "mongodb://heroku_h9rvl4jg:heroku420@ds013946.mlab.com:13946/heroku_h9rvl4jg");
 
 // Start the API server
 app.listen(PORT, function() {
