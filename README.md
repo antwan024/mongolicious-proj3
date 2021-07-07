@@ -25,4 +25,5 @@ Check out this app here: https://...herokuapp.com
 * Anthony Nguyen
 * Daniel Taquez
 * Marcel Carey
+* Nina Shin
 * Obiageli Ogbutor
